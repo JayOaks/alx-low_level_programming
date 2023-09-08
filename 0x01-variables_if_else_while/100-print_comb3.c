@@ -2,7 +2,7 @@
 
 /**
  * main - Entry point
- * Description: Double Digit Combinations
+ * Description: Double Digits Combinations
  * Return: 0
  */
 
