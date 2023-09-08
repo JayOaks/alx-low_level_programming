@@ -6,18 +6,17 @@
  * Return: 0
  */
 
-int main(void)
+int main()
 {
-int i;
-
-for (i = 0; i < 16; i++)
+for (int i = 0; i < 16; i++)
 {
 putchar('0' + i);
 }
-for (i = 0; i < 6; i++)
+for (int i = 0; i < 6; i++)
 {
 putchar('a' + i);
 }
 putchar('\n');
+
 return (0);
 }
