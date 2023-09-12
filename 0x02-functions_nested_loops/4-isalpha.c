@@ -2,12 +2,12 @@
 #include <stdio.h>
 
 /**
-* _islower - checks if a character is alphabetic
+* _isalpha - checks if a character is alphabetic
 * @c: character to be checked
 * Return: 1 = character is alphabetic, 0 = character is not alphabetic
 **/
 
-int _islower(int c)
+int _isalpha(int c)
 {
 if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 {
