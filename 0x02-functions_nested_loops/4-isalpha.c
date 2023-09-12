@@ -3,7 +3,8 @@
 
 /**
 * _islower - checks if a character is alphabetic
-* return - 1 = character is alphabetic, 0 = character is not alphabetic
+* @c: character to be checked
+* Return: 1 = character is alphabetic, 0 = character is not alphabetic
 **/
 
 int _islower(int c)
