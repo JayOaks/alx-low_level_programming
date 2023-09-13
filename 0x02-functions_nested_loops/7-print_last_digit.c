@@ -1,9 +1,9 @@
 #include "main.h"
 #include <stdio.h>
 
-/*
-* print_last_digit - Prints last digit of a given value/number
-* @n - The value/number to be assessed
+/**
+* print_last_digit - Prints the last digit of a given value/number
+* @n: The value/number to be assessed
 * Return: The value of the last digit
 */
 
