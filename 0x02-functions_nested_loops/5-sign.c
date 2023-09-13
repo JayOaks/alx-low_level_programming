@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /*
-* print_sign - Prints sign of a number (positive, negative or zero)
+* print_sign - Prints sign of a number.
 * @n - the variable/value to be assessed
 * Return: -1 (for negative numbers), 0 (for zero), 1 (for positive numbers)
 */
