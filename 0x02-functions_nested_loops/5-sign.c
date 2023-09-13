@@ -1,11 +1,14 @@
 #include "main.h"
 #include <stdio.h>
 
-/*
-* print_sign - Prints the sign of a number.
-* @n - the variable/value to be assessed
-* Return: -1 (for negative numbers), 0 (for zero), 1 (for positive numbers)
-*/
+/**
+ * print_sign - Prints the sign of a number.
+ * @n: The number of which the sign will be printed.
+ *
+ * Return: 1 if the number is greater than zero,
+ *	   0 if the number is zero,
+ *	   1 if the number is less than zero.
+ */
 
 int print_sign(int n)
 {
