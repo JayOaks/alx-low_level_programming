@@ -1,10 +1,12 @@
 #include "main.h"
+
 /**
  * _strcmp - compare 2 string
  * @s1:string
  * @s2:strmp
  * Return:int
  */
+
 int _strcmp(char *s1, char *s2)
 {
 	while (((*s1 != '\0') && (*s2 != '\0')) && (*s1 == *s2))
