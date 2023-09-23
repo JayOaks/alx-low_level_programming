@@ -8,21 +8,20 @@
  * Return: returns pointer to @dest
  */
 
-
 char *_strcat(char *dest, char *src)
 {
-	char *p = dest;
+char *p = dest;
 
-	while (*p != '\0')
-	{
-		p++;
-	}
-	while (*src != '\0')
-	{
-		*p = *src;
-		p++;
-		src++;
-	}
-	*p = '\0';
-	return (dest);
+while (*p != '\0')
+{
+p++;
+}
+while (*src != '\0')
+{
+*p = *src;
+p++;
+src++;
+}
+*p = '\0';
+return (dest);
 }
