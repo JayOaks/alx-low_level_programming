@@ -14,6 +14,7 @@ int main(int argc, char *argv[])
 {
 	int i, coins, cents, num_denom;
 	int denominations[] = {25, 10, 5, 2, 1};
+	
 	if (argc != 2)
 	{
 		printf("Error\n");
