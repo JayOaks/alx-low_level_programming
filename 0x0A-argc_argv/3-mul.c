@@ -3,26 +3,25 @@
 #include <stdlib.h>
 
 /**
- * main - entry point
- * Description: Multiplies two numbers and prints the result followed by a new line.
- * @argc: The number of command-line arguments.
- * @argv: An array of strings containing the command-line arguments.
- * Return: 0 and result when successful, 1 and Error when parameters not met.
+ * main - Entry point
+ * Description: Multiplies two numbers
+ * @argc: No of command line arguments
+ * @argv: Array name
+ * Return: 1 if needs more arguements, 0 otherwise
  */
 
 int main(int argc, char *argv[])
 {
-    int i = argc - 1, j = i - 1, res;
-    
-    if (i == 2)
-    {
-        res = atoi(argv[i]) * atoi(argv[j]);
-        printf("%d\n", res);
-        return (0);
-    }
-    else
-    {
-        printf("Error\n");
-        return (1);
-        }
+	int n1, n2, ans;
+
+	if (argc != 3)
+	{
+		printf("Error\n");
+		return (1);
+	}
+	n1 = atoi(argv[1]);
+	n2 = atoi(argv[2]);
+	ans = n1 * n2;
+	printf("%d\n", ans);
+	return (0);
 }
