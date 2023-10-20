@@ -6,8 +6,8 @@
  * @d: is the pointer to the structure
  * @name: is the pointer the name of the dog
  * @age: is the pointer to the age of the dog
- * @owner is the pointer to the name of the dog's owner
- * 
+ * @owner: is the pointer to the name of the dog's owner
+ *
  * Return: void
 **/
 
