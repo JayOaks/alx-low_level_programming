@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * free_dog - frees the dogs by freeing the memory 
+ * free_dog - frees the dogs by freeing the memory
  * allocated to their information
  * @d: is the pointer to the dog/dog's information to freed
  *
