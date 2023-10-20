@@ -1,5 +1,9 @@
 #ifndef S_L_LINKED
 #define S_L_LINKED
+#include <stdio.h>
+#include <stddef.h>
+#include <stdlib.h>
+#include <string>
 
 /**
  * struct list_s - singly linked list
