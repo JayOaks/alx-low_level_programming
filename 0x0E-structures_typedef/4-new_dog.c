@@ -20,12 +20,16 @@ if (ndog == NULL)
 return (NULL);
 
 ndog->name = strdup(name);
-ndog->owner = strdup(owner);
+if (ndog->name == NULL)
+{
+free(ndog);
+return (NULL);
+}
 
-if (ndog->name == NULL || ndog->owner == NULL)
+ndog->owner = strdup(owner);
+if (ndog->owner == NULL)
 {
 free(ndog->name);
-free(ndog->owner);
 free(ndog);
 return (NULL);
 }
