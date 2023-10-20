@@ -2,12 +2,6 @@
 
 void preMain(void);
 
-void preMain(void)
-{
-printf("You're beat! and yet, you must allow,\n");
-printf("I bore my house upon my back!\n");
-}
-
 int main()
 {
 preMain();
@@ -16,4 +10,10 @@ preMain();
 // ...
 
 return 0;
+}
+
+void preMain(void)
+{
+printf("You're beat! and yet, you must allow,\n");
+printf("I bore my house upon my back!\n");
 }
