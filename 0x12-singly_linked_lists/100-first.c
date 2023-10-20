@@ -2,6 +2,10 @@
 
 void ahead(void) __attribute__ ((constructor));
 
+/**
+ * first - prints a sentence before the main function
+ */
+
 void ahead(void)
 {
 printf("You're beat! and yet, you must allow,\n");
