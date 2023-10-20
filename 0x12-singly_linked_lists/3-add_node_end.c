@@ -5,16 +5,16 @@
 #include "lists.h"
 
 /**
- * add_node - adds a new node at the beginning of a linked list
+ * add_node_end - adds a new node at the end of a linked list
  * @head: is the pointer to a pointer to the head of the linked list
  * @str: is the string to be duplicated and added as the value of the new node
  *
  * Return: (list_t *) The address of the new element, or NULL if it fails.
 **/
 
-list_t *add_node(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
-list_t *nnode;
+list_t *nnode, *current;
 
 if (str == NULL)
 return (NULL);
@@ -33,8 +33,21 @@ return (NULL);
 }
 
 nnode->len = strlen(str);
-nnode->next = *head;
+nnode->next = NULL;
+
+if (*head == NULL)
+{
 *head = nnode;
+}
+else
+{
+current = *head;
+while (current->next != NULL)
+{
+current = current->next;
+}
+current->next = nnode;
+}
 
 return (nnode);
 }
