@@ -1,17 +1,19 @@
 section .data
-    hello db "Hello, Holberton",10,0   ; The string to print, followed by a newline and null terminator
+	txt: db "Hello, Holberton", 10
 
 section .text
-    global main
-
-extern printf
+	global main
+	extern printf
 
 main:
-    ; Prepare the stack for the printf call
-    push rbp
-    mov rdi, hello          ; Format string
-    call printf
+	push rbp
+	mov rbp, rsp
 
-    ; Clean up and exit
-    pop rbp
-    ret
+	lea rdi, [txt]
+	xor eax, eax
+	call printf
+ 
+	mov rsp, rbp
+	pop rbp
+	xor eax, eax
+	ret
