@@ -8,22 +8,22 @@
  * Return: The converted integer, 
  * or -1 if the string is not a valid positive number
  */
-int my_atoi(char *str)
+int _atoi(char *s)
 {
 int result = 0;
 
-if (str[0] == '\0')
+if (s[0] == '\0')
 {
 return (-1);
 }
 
-for (int i = 0; str[i] != '\0'; i++)
+for (int i = 0; s[i] != '\0'; i++)
 {
-if (str[i] < '0' || str[i] > '9')
+if (s[i] < '0' || s[i] > '9')
 {
 return (-1);
 }
-result = result * 10 + (str[i] - '0');
+result = result * 10 + (s[i] - '0');
 }
 return (result);
 }
@@ -45,8 +45,8 @@ printf("Error\n");
 exit(98);
 }
 
-num1 = my_atoi(argv[1]);
-num2 = my_atoi(argv[2]);
+num1 = _atoi(argv[1]);
+num2 = _atoi(argv[2]);
 
 if (num1 <= 0 || num2 <= 0)
 {
