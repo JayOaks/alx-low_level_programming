@@ -10,7 +10,7 @@
 
 long long _atoll(char *s)
 {
-long long retval = 0; 
+long long retval = 0;
 int i = 0, neg = 1;
 
 if (s[i] == '-')
