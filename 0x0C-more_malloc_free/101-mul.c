@@ -3,64 +3,58 @@
 #include <stdio.h>
 
 /**
- * _atoll - Converts a character array to a long long integer
- * @s: character array to convert
- * Return: returns long long integer from array, returns 0 if none found
+ * my_atoi - Converts a string to an integer, assuming it's a positive number
+ * @str: The string to convert
+ * Return: The converted integer, or -1 if the string is not a valid positive number
  */
+int my_atoi(char *str)
+{
+int result = 0;
 
-long long _atoll(char *s)
+if (str[0] == '\0')
 {
-long long retval = 0;
-int i = 0, neg = 1;
+return -1;
+}
 
-if (s[i] == '-')
+for (int i = 0; str[i] != '\0'; i++)
 {
-neg = -1;
-i++;
-}
-while (s[i] != '\0' && (s[i] >= '0' && s[i] <= '9'))
+if (str[i] < '0' || str[i] > '9')
 {
-retval = (retval * 10) + (s[i] - '0');
-i++;
+return -1;
 }
-return (retval *neg);
+result = result * 10 + (str[i] - '0');
+}
+return result;
 }
 
 /**
- * main - multiplies two positive numbers
- * @argc: number of arguments
- * @argv: argument vector
- * Return: int
+ * main - Multiplies two positive numbers
+ * @argc: Argument count
+ * @argv: Argument vector
+ * Return: 0 on success, 98 on error
  */
-
 int main(int argc, char *argv[])
 {
-long long a, b;
-unsigned long long mul;
+int num1, num2;
+long mul;
+
 if (argc != 3)
 {
 printf("Error\n");
 exit(98);
 }
-for (int i = 1; i < argc; i++)
-{
-for (int j = 0; argv[i][j] != '\0'; j++)
-{
-if (argv[i][j] > '9' || argv[i][j] < '0')
-{
-printf("Error\n");
-exit(98);
-}
-}
-}
-a = _atoll(argv[1]);
-b = _atoll(argv[2]);
-if (a <= 0 || b <= 0)
+
+num1 = my_atoi(argv[1]);
+num2 = my_atoi(argv[2]);
+
+if (num1 <= 0 || num2 <= 0)
 {
 printf("Error\n");
 exit(98);
 }
-mul = a *b;
-printf("%llu\n", mul);
-return (0);
+
+mul = (long)num1 * num2;
+printf("%ld\n", mul);
+
+return 0;
 }
