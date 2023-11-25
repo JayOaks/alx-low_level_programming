@@ -10,19 +10,13 @@
 
 int _atoi(char *s)
 {
-int retval, i, neg;
-i = 0;
+int retval, i;
 retval = 0;
-neg = -1;
-while (s[i] != '\0' && (s[i] < '0' || s[i] > '9'))
+for (i = 0; s[i] != '\0' && (s[i] >= '0' && s[i] <= '9'); i++)
 {
-if (s[i] == '-')
-neg *= -1;
-i++;
-}
-while (s[i] != '\0' && (s[i] >= '0' && s[i] <= '9'))
-retval = (retval * 10) - (s[i++] - '0');
-return (retval *neg);
+retval = (retval * 10) + (s[i] - '0');
+{
+return (retval);
 }
 
 /**
@@ -36,25 +30,29 @@ int main(int argc, char *argv[])
 {
 int a, b, i, j;
 unsigned long mul;
+
 if (argc != 3)
 {
 printf("Error\n");
 exit(98);
 }
+
 for (i = 1; i < argc; i++)
 {
 for (j = 0; argv[i][j] != '\0'; j++)
 {
-if (argv[i][j] > 57 || argv[i][j] < 48)
+if (argv[i][j] < '0' || argv[i][j] > '9')
 {
 printf("Error\n");
 exit(98);
 }
 }
 }
+
 a = _atoi(argv[1]);
 b = _atoi(argv[2]);
-mul = a *b;
+mul = (unsigned long)a * (unsigned long)b;
 printf("%lu\n", mul);
+
 return (0);
 }
