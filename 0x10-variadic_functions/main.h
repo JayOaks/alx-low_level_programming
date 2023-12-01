@@ -1,6 +1,9 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#include <stdarg.h>
+#include <stdio.h>
+
 /**
  * Auth: Jeroldine Oakley
  * Desc: Header file containing prototypes for all functions
