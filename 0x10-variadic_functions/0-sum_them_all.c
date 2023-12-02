@@ -3,7 +3,7 @@
 /**
  * sum_them_all - sums up all of its given parameters
  * @n: number of parameters
- * Return: sum or fail
+ * Return: sum if successful or 0 if failed
 */
 
 int sum_them_all(const unsigned int n, ...)
