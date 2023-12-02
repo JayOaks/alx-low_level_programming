@@ -3,17 +3,18 @@
 #include "3-calc.h"
 
 /**
- * main - Entry point
+ * main - performs simple operations
  * @argc: Argument count
  * @argv: Argument vector
  * Return: 0 on success, exits with a status of 98, 99, or 100 on failure
  */
+
 int main(int argc, char *argv[])
 {
-    int num1, num2, result;
-    int (*op_func)(int, int);
+int num1, num2, result;
+int (*op_func)(int, int);
 
-    if (argc != 4)
+if (argc != 4)
 {
 printf("Error\n");
 exit(98);
