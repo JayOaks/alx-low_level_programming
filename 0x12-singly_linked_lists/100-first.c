@@ -3,7 +3,7 @@
 void ahead(void) __attribute__ ((constructor));
 
 /**
- * first - prints a sentence before the main function
+ * ahead - prints a sentence before the main function
  */
 
 void ahead(void)
