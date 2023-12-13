@@ -1,12 +1,6 @@
 #ifndef MSL_LISTS
 #define MSL_LISTS
 
-/**
- * Auth: Jeroldine Oakley
- * Desc: Header file containing prototypes for all functions
- *       used in the 0x13-more_singly_lists repository.
- */
-
 #include <stdio.h>
 #include <stddef.h>
 #include <stdlib.h>
@@ -17,13 +11,12 @@
  * @next: points to the next node
  *
  * Description: singly linked list node structure
- * 
+ *
  */
-
 typedef struct listint_s
 {
-    int n;
-    struct listint_s *next;
+int n;
+struct listint_s *next;
 } listint_t;
 
 int _putchar(char c);
