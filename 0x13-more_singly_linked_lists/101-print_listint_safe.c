@@ -9,12 +9,13 @@
 
 size_t print_listint_safe(const listint_t *head)
 {
-const listint_t *slow = head;
+const listint_t *slow, *tmp;
 size_t nodes = 0;
+
+slow = head->next;
 
 while (slow != NULL)
 {
-const listint_t *tmp = head;
 for (size_t i = 0; i < nodes; i++)
 {
 if (tmp == slow->next)
