@@ -9,7 +9,7 @@
 
 size_t print_listint_safe(const listint_t *head)
 {
-const listint_t *slow, *vts;
+const listint_t *slow = head;
 size_t nodes = 0;
 
 while (slow)
