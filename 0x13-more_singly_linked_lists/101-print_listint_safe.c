@@ -11,16 +11,23 @@
 size_t print_listint_safe(const listint_t *head)
 {
 const listint_t *slow, *tmp;
-size_t nodes = 0, i;
+size_t nodes = 0;
 
 if (head == NULL)
 return (0);
+
+if (head->next == head)
+{
+printf("[%p] %d\n", (void *)head, head->n);
+printf("-> [%p] %d\n", (void *)head->next, head->next->n);
+return (1);
+}
 
 slow = head;
 while (slow != NULL)
 {
 tmp = head;
-for (i = 0; i < nodes; i++)
+for (size_t i = 0; i < nodes; i++)
 {
 if (tmp == slow->next)
 {
